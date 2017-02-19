@@ -1,6 +1,14 @@
 # Composer template for Drupal projects
+Josh Fabean Edition
 
-[![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
+## How to use
+1. Download git repo
+2. `composer install` (you can do composer upgrade first if you'd like but it will take longer to find all new dependencies if they changed at all)
+3. Run `docker-composer -f compose.yaml up -d`
+    - This Implies you have docker setup in a similar way to me. Will need to put that up somewhere later.
+4. Go to your new local site.
+
+# Previous Readme
 
 This project template should provide a kickstart for managing your site
 dependencies with [Composer](https://getcomposer.org/).
