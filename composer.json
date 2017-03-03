@@ -41,7 +41,6 @@
         "drupal/token": "~1.0",
         "drupal/adminimal_theme": "~1.0",
         "drupal/prlp": "^1.2"
-
     },
     "require-dev": {
         "behat/mink": "~1.7",
