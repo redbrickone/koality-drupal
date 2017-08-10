@@ -9,7 +9,6 @@ services:
       MYSQL_USER: mysql
       MYSQL_PASSWORD: mysql
     volumes:
-      #- drupal-project-mysql-sync:/var/lib/mysql
       - ../sites-databases/drupal-project:/var/lib/mysql
     networks:
       - dockercompose
@@ -35,10 +34,10 @@ services:
       #SESMailHub: mail-relay.ckdev.io
       #LOCAL: "true"
     volumes:
-      #- drupal-project-files-sync:/mnt/sites-files
       - ../sites-files/drupal-project:/mnt/site-files
-      #- drupal-project-sync:/var/www/site
       - ./:/var/www/site
+      #- drupal-project-files-sync:/mnt/sites-files
+      #- drupal-project-sync:/var/www/site
     networks:
       - dockercompose
     links:
