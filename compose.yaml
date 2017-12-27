@@ -42,7 +42,7 @@ services:
       - dockercompose
     links:
       - drupal-project-mysql:mysql
-    extra_hosts:
+    # extra_hosts:
       #- "xdebug:192.168.237.237"
     restart: always
 networks:
