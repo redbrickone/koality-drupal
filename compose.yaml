@@ -18,7 +18,7 @@ services:
     container_name: drupal-project
     image: codekoalas/drupal8
     environment:
-      VIRTUAL_HOST: .drupal-project.dev
+      VIRTUAL_HOST: .drupal-project.localhost
       #GIT_HOSTS: "IP url" it was hard coded to our internal gitlab removed for safety
       GIT_REPO: https://github.com/fabean/drupal-project.git
       GIT_BRANCH: 8.x
@@ -26,8 +26,8 @@ services:
       MYSQL_DATABASE: drupal
       MYSQL_USER: mysql
       MYSQL_PASSWORD: mysql
-      DRUPAL_BASE_URL: http://drupal-project.dev
-      DRUPAL_TRUSTED_HOSTS: drupal-project\.dev$$
+      DRUPAL_BASE_URL: http://drupal-project.localhost
+      DRUPAL_TRUSTED_HOSTS: drupal-project\.localhost$$
       DRUPAL_HTTPS: "off"
       APACHE_DOCROOT: /var/www/site/docroot
       PRODUCTION: "false"
