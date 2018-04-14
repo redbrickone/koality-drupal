@@ -2,14 +2,13 @@
 Josh Fabean Edition
 
 ## How to use
-1. Download git repo
-2. `composer install` (you can do composer upgrade first if you'd like but it will take longer to find all new dependencies if they changed at all)
-3. Run `docker-composer -f compose.yaml up -d`
+1. `composer create-project drupal-composer/drupal-project:8.x-dev some-dir --stability dev --no-interaction`
+2. Run `docker-composer -f compose.yaml up -d`
     - This Implies you have docker setup in a similar way to me. Will need to put that up somewhere later.
-4. Possible extra step
+3. Possible extra step
   a. `docker exec -ti drupal-project /bin/bash` change `drupal-project` with your container name
   b. from inside the container run `composer install` again.
-5. Go to your new local site.
+4. Go to your new local site.
 
 # Previous Readme
 
@@ -31,7 +30,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project drupal-composer/drupal-project:8.x-dev some-dir --stability dev --no-interaction
+composer create-project codekoalas/drupal-project:8.x-dev some-dir --stability dev --no-interaction
 ```
 
 With `composer require ...` you can download new dependencies to your
