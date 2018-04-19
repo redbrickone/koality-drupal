@@ -2,7 +2,7 @@
 Josh Fabean Edition
 
 ## How to use
-1. `composer create-project drupal-composer/drupal-project:8.x-dev some-dir --stability dev --no-interaction`
+1. `composer create-project codekoalas/drupal-project:8.x-dev some-dir --stability dev --no-interaction`
 2. Run `docker-composer -f compose.yaml up -d`
     - This Implies you have docker setup in a similar way to me. Will need to put that up somewhere later.
 3. Possible extra step
