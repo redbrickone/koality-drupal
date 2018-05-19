@@ -16,7 +16,7 @@ services:
     restart: always
   drupal-project:
     container_name: drupal-project
-    image: codekoalas/drupal8
+    image: codekoalas/drupal8:permissionsFix
     environment:
       VIRTUAL_HOST: .drupal-project.localhost
       #GIT_HOSTS: "IP url" it was hard coded to our internal gitlab removed for safety
