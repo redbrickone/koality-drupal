@@ -42,6 +42,7 @@ install-module:
 	docker exec -ti -w $(PROJECT_ROOT) $(IMAGE_NAME) /bin/bash -ci "drupal module:install $(module)"
 
 # If you put the db you want in the root of the project and run this command it will import that database
+# the database filename must be starter.sql and in the root of this repo
 # WARNING: You will lose any local changes you have made
 import-db:
 	docker-compose down
