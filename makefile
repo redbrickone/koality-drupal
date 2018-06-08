@@ -60,3 +60,6 @@ config-export:
 # import the config from config files into the DB
 config-import:
 	docker exec -ti -w $(DRUPAL_ROOT) $(IMAGE_NAME) /bin/bash -ci "drush config-import"
+
+setup-config:
+	docker exec -ti -w $(DRUPAL_ROOT) $(IMAGE_NAME) /bin/bash -ci "cp -R config_split/* config/default/default/. && drush config-import"
