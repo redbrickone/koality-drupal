@@ -2,7 +2,7 @@
 Josh Fabean Edition
 
 ## How to use
-1. `composer create-project codekoalas/drupal-project:8.x-dev some-dir --stability dev --no-interaction`
+1. `composer create-project codekoalas/koality-drupal:8.x-dev some-dir --stability dev --no-interaction`
 2. Run `docker-composer -f compose.yaml up -d`
     - This Implies you have docker setup in a similar way to me. Will need to put that up somewhere later.
 3. Possible extra step
@@ -62,11 +62,11 @@ When installing the given `composer.json` some tasks are taken care of:
 
 ## Updating Drupal Core
 
-This project will attempt to keep all of your Drupal Core files up-to-date; the 
-project [drupal-composer/drupal-scaffold](https://github.com/drupal-composer/drupal-scaffold) 
-is used to ensure that your scaffold files are updated every time drupal/core is 
-updated. If you customize any of the "scaffolding" files (commonly .htaccess), 
-you may need to merge conflicts if any of your modified files are updated in a 
+This project will attempt to keep all of your Drupal Core files up-to-date; the
+project [drupal-composer/drupal-scaffold](https://github.com/drupal-composer/drupal-scaffold)
+is used to ensure that your scaffold files are updated every time drupal/core is
+updated. If you customize any of the "scaffolding" files (commonly .htaccess),
+you may need to merge conflicts if any of your modified files are updated in a
 =======
 This project will attempt to keep all of your Drupal Core files up-to-date; the
 project [drupal-composer/drupal-scaffold](https://github.com/drupal-composer/drupal-scaffold)
