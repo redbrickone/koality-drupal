@@ -53,13 +53,16 @@ import-db:
 logs:
 	docker logs $(IMAGE_NAME) -f
 
+login:
+	docker exec -ti -w $(PROJECT_ROOT) $(IMAGE_NAME) /bin/bash
+
 # Export the config from the DB into config files
 config-export:
-	docker exec -ti -w $(DRUPAL_ROOT) $(IMAGE_NAME) /bin/bash -ci "drush config-export"
+	docker exec -ti -w $(PROJECT_ROOT) $(IMAGE_NAME) /bin/bash -ci "drupal config:export"
 
 # import the config from config files into the DB
 config-import:
-	docker exec -ti -w $(DRUPAL_ROOT) $(IMAGE_NAME) /bin/bash -ci "drush config-import"
+	docker exec -ti -w $(PROJECT_ROOT) $(IMAGE_NAME) /bin/bash -ci "drupal config:import"
 
 setup-config:
 	docker exec -ti -w $(DRUPAL_ROOT) $(IMAGE_NAME) /bin/bash -ci "cp -R config_split/* config/default/default/. && drush config-import"
